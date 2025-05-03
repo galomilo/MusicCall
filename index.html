@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="piano_padre">
+
+    </div>
+
+    <style>
+        .white_keys {
+            left: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0%;
+            color: black;
+            text-align: center;
+        }
+
+        .black_keys {
+            display: flex;
+            left: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0%;
+            color: white;
+            text-align: center;
+        }
+
+        #piano_padre {
+            position: relative;
+            float: left;
+        }
+
+        .white_key {
+            vertical-align: baseline;
+            background: rgb(244, 244, 244);
+            height: 150px;
+            border: 2px solid #ccc;
+            list-style: none;
+            margin: 0%;
+            padding: 0%;
+            display: flex;
+            flex-direction: column-reverse;
+            box-sizing: border-box;
+            z-index: 99;
+            font-family: monospace;
+            font-weight: bold;
+            border-radius: 0px 0px 4px 4px;
+            box-shadow: 0px 5px 0px rgba(189, 189, 189, 0.546);
+        }
+
+        .black_key {
+            vertical-align: baseline;
+            background: rgb(20, 20, 20);
+            border: 2px solid #ccc;
+            height: 110px;
+            list-style: none;
+            padding: 0%;
+            display: flex;
+            flex-direction: column-reverse;
+            box-sizing: border-box;
+            z-index: 99;
+            font-family: monospace;
+            font-weight: bold;
+            border-radius: 0px 0px 4px 4px;
+            box-shadow: 0px 4px 0px rgba(58, 58, 58, 0.546);
+        }
+
+        .vacio {
+            vertical-align: baseline;
+            background: transparent;
+            border: 2px solid transparent;
+            list-style: none;
+            padding: 0%;
+            box-sizing: border-box;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        #padre {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    
+    <script src="piano.js"></script>
+</body>
+</html>
