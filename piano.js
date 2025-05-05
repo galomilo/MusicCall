@@ -117,3 +117,23 @@ for (let i = 0; i < n_black_keys; i++) {
     }
     key.style.width = black_key_width + "px";
 }
+
+let fl_dir = "Flauta_Escala1/"
+let agujeros = ["fl_orificio1","fl_orificio2","fl_orificio3","fl_orificio4","fl_orificio5","fl_orificio6","fl_orificio7"];
+let fl_sounds = [`${fl_dir}do.mp3`,`${fl_dir}re.mp3`,`${fl_dir}mi.mp3`,`${fl_dir}fa.mp3`,`${fl_dir}sol.mp3`,`${fl_dir}la.mp3`,`${fl_dir}si.mp3`];
+
+for (let i = 0; i < agujeros.length; i++) {
+    let agujero = document.getElementById(agujeros[i]);
+    agujero.addEventListener("click", () => {
+        let sonido = new Audio(fl_sounds[(fl_sounds.length*1-1)-i]);
+        sonido.currentTime = 0;
+        sonido.play();
+    });
+    let back = agujero.style.background;
+    agujero.addEventListener("mouseover", () => {
+        agujero.style.background = "#2e281b";
+    });
+    agujero.addEventListener("mouseleave", () => {
+        agujero.style.background = back;
+    });
+}
