@@ -120,7 +120,7 @@ for (let i = 0; i < n_black_keys; i++) {
 
 let fl_dir = "Flauta_Escala1/"
 let agujeros = ["fl_orificio1","fl_orificio2","fl_orificio3","fl_orificio4","fl_orificio5","fl_orificio6","fl_orificio7"];
-let fl_sounds = [`${fl_dir}do.mp3`,`${fl_dir}re.mp3`,`${fl_dir}mi.mp3`,`${fl_dir}fa.mp3`,`${fl_dir}sol.mp3`,`${fl_dir}la.mp3`,`${fl_dir}si.mp3`];
+let fl_sounds = [`${fl_dir}do5.mp3`,`${fl_dir}re5.mp3`,`${fl_dir}mi5.mp3`,`${fl_dir}fa5.mp3`,`${fl_dir}sol5.mp3`,`${fl_dir}la5.mp3`,`${fl_dir}si5.mp3`];
 
 for (let i = 0; i < agujeros.length; i++) {
     let agujero = document.getElementById(agujeros[i]);
