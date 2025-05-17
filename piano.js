@@ -1,5 +1,6 @@
 let body = document.getElementsByTagName("body");
 let piano_padre = document.getElementById("piano_padre");
+let volume_bar = document.getElementById("volume_bar");
 
 let white_sounds = ["Escala1/do.mp3","Escala1/re.mp3","Escala1/mi.mp3","Escala1/fa.mp3","Escala1/sol.mp3","Escala1/la.mp3","Escala1/si.mp3",
     "Escala2/do.mp3","Escala2/re.mp3","Escala2/mi.mp3","Escala2/fa.mp3","Escala2/sol.mp3","Escala2/la.mp3","Escala2/si.mp3",
@@ -41,6 +42,7 @@ for (let i = 0; i < n_white_keys; i++) {
     let sonido = new Audio(white_sounds[i]);
     key.addEventListener("click", () => {
         sonido = new Audio(white_sounds[i]);
+        sonido.volume = volume_bar.value/100;
         sonido.currentTime = 0;
         //alert(key.id);
         sonido.play();
@@ -88,6 +90,7 @@ for (let i = 0; i < n_black_keys; i++) {
             num_sound = key.id.substring(6);
             num_sound *= 1;
             sonido = new Audio(black_sounds[num_sound]);
+            sonido.volume = volume_bar.value/100;
             sonido.currentTime = 0;
             sonido.play();
             key.style.boxShadow = "0px 4px 0px rgba(58, 58, 58, 0)";
@@ -126,6 +129,7 @@ for (let i = 0; i < agujeros.length; i++) {
     let agujero = document.getElementById(agujeros[i]);
     agujero.addEventListener("click", () => {
         let sonido = new Audio(fl_sounds[(fl_sounds.length*1-1)-i]);
+        sonido.volume = volume_bar.value/100;
         sonido.currentTime = 0;
         sonido.play();
     });
@@ -135,5 +139,21 @@ for (let i = 0; i < agujeros.length; i++) {
     });
     agujero.addEventListener("mouseleave", () => {
         agujero.style.background = back;
+    });
+}
+
+//bateria
+const drum_folder = "Bateria/";
+let drum_sounds_names = ["bass_drum", "crash1", "floor_tom", "ride1", "snare1", "tom1", "tom2"];
+let drum_sounds = ["bass drum.wav", "crash1.wav", "floor tom.wav", "ride1.wav", "snare1.wav", "tom1.wav", "tom2.wav"];
+
+for (let i = 0; i < drum_sounds.length; i++) {
+    let button_drum = document.getElementById(drum_sounds_names[i]);
+
+    button_drum.addEventListener("click", () => {
+        let sonido = new Audio(drum_folder + drum_sounds[i]);
+        sonido.volume = volume_bar.value/100;
+        sonido.currentTime = 0;
+        sonido.play();
     });
 }
