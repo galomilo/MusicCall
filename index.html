@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicCall</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png" />
 </head>
 <body>
     <header>
@@ -28,7 +29,10 @@
             </div>
         </article>
     </main>
-    <h2>lorasasd</h2>
+
+    <footer>
+        <p class="foot_text">&copy; 2025 Galo Alvarez / MusicCall</p>
+    </footer>
 
     <style>
         header {
@@ -87,7 +91,7 @@
         }
 
         .principal_content {
-            margin-top: 18%;
+            margin-top: 30vh;
             font-family: sans-serif;
             display: flex;
             align-items: center;
@@ -107,6 +111,32 @@
             background: #e69c4e;
             color: #6f300a;
             margin-top: 40px;
+        }
+
+        footer {
+            font-family: sans-serif;
+            width: 100%;
+            height: 65px;
+            background: #e69c4e;
+            margin: 0%;
+
+            border-top: solid #6f300a 4px;
+        }
+
+        .foot_text{
+            text-align: center;
+            color: #6f300a;
+        }
+
+
+
+        @media (max-width: 525px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+                height: auto;
+                padding-bottom: 10px;
+            }
         }
     </style>
     
