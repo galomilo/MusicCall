@@ -1,0 +1,23 @@
+{
+  "name": "musiccall",
+  "version": "1.0.0",
+  "description": "Los sonidos de piano usados en este proyecto fueron grabados personalmente tocando el piano virtual de Musicca.com.\r Agradecemos a Musicca por proporcionar esta herramienta para crear música en línea.",
+  "main": "instruments.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galomilo/MusicCall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galomilo/MusicCall/issues"
+  },
+  "homepage": "https://github.com/galomilo/MusicCall#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
