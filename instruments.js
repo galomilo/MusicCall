@@ -159,8 +159,18 @@ for (let i = 0; i < drum_sounds.length; i++) {
 }
 
 //xilofono
+const xilof_folder = "Xilofono/xylophone-";
+let xilof_sounds = [
+     `${xilof_folder}c3.wav`,
+     `${xilof_folder}d3.wav`,
+     `${xilof_folder}e3.wav`,
+     `${xilof_folder}f3.wav`,
+     `${xilof_folder}g3.wav`,
+     `${xilof_folder}a3.wav`,
+     `${xilof_folder}b3.wav`];
+
 let xilof_padre = document.getElementById("xilofono_padre");
-let xilof_parts = 8;
+let xilof_parts = 7;
 let start_size = 100;
 for (let i = 0; i < xilof_parts; i++) {
     let part = document.createElement("div");
@@ -180,6 +190,13 @@ for (let i = 0; i < xilof_parts; i++) {
     part.className = "xilof_part";
     part.style.height = start_size + "px";
     start_size += 8;
+
+    part.addEventListener("click", () => {
+        let sonido = new Audio(xilof_sounds[i]);
+        sonido.volume = volume_bar.value/100;
+        sonido.currentTime = 0;
+        sonido.play();
+    })
 
     part.appendChild(cir1);
     part.appendChild(cir2);
