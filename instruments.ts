@@ -163,7 +163,7 @@ const xilof_sounds: string[] = [`${xilof_folder}c3.wav`, `${xilof_folder}d3.wav`
      `${xilof_folder}g3.wav`, `${xilof_folder}a3.wav`, `${xilof_folder}b3.wav`];
 
 const xilof_padre = document.getElementById("xilofono_padre") as HTMLDivElement;
-const xilof_parts: number = 8;
+const xilof_parts: number = 7;
 let start_size: number = 100;
 for (let i = 0; i < xilof_parts; i++) {
     let part = document.createElement("div");
